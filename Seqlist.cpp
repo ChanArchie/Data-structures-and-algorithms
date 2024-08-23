@@ -60,7 +60,7 @@ Datatype Seqlist<Datatype>::getElement(int location)
 {
     if (location< 0 || location>length)
     {
-        std:cout<<"參數無效"<<STD::endl;
+        std::cout<<"參數無效"<<std::endl;
         return 0;
     }
     else

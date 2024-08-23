@@ -1,6 +1,7 @@
 #include <iostream>
+#include "Seqlist.cpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Seqlist<int> list(10);
     return 0;
 }

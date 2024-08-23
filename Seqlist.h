@@ -12,6 +12,7 @@ template <typename DataType> class Seqlist {
     private:
         DataType *elements;
         int maxSize;  //顺序表最大大小
+        int length;
 };
 
 
