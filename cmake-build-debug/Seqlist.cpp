@@ -1,7 +1,7 @@
 
 
 #include "Seqlist.h"
-/*****线性表数据结构*****/
+/*****順序表数据结构*****/
 /***順序表的定義 構造函數***/
 template <typename DataType>
 Seqlist<DataType>::Seqlist(int size)
@@ -68,3 +68,19 @@ Datatype Seqlist<Datatype>::getElement(int location)
         return elements[location];
     }
 }
+
+/***修改指定位置的元素值***/
+template<typename DataType>
+bool Seqlist<DataType>::changeElement(int location, DataType newData)
+{
+    if(location<0||location>=length)
+    {
+        return false;
+    }
+    else
+    {
+        elements[location]= newData;
+        return true;
+    }
+}
+
