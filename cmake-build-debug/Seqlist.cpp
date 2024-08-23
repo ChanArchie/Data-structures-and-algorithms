@@ -53,3 +53,18 @@ bool Seqlist<Datatype>::deleteElement(int location)
         return true;
     }
 }
+
+/***獲取指定位置的元素***/
+template <typename Datatype>
+Datatype Seqlist<Datatype>::getElement(int location)
+{
+    if (location< 0 || location>length)
+    {
+        std:cout<<"參數無效"<<STD::endl;
+        return 0;
+    }
+    else
+    {
+        return elements[location];
+    }
+}
