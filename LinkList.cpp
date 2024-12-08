@@ -23,7 +23,7 @@ LinkList<DataType>::~LinkList() {
 }
 
 template<typename DataType>
-bool LinkList<DataType>::insertNode(ListNode<DataType> *q, DataType newData) {
+bool LinkList<DataType>::insertNode(DataType newData) {
     ListNode<DataType> *p = head;
     ListNode<DataType> *node = new ListNode<DataType>(newData);
     if(node==NULL) {
@@ -51,5 +51,40 @@ bool LinkList<DataType>::removeNode(ListNode<DataType> *q) {
         return true;
 }
 
+template<typename DataType>
+bool LinkList<DataType>::cleanLink() {
+    ListNode<DataType> *tempPointer = head;
+    while(tempPointer->next!=NULL) {
+        tempPointer=head->next;
+        head->next=tempPointer->next;
+        delete tempPointer;
+    }
+}
+
+template<typename DataType>
+ListNode<DataType> *LinkList<DataType>::findNode(DataType value) {
+    ListNode<DataType> *tempPointer = head;
+    while(tempPointer!=NULL&&tempPointer->data!=value) {
+        tempPointer=tempPointer->next;
+    }
+    if(tempPointer==NULL) {
+        std::cout<<"node not found"<<std::endl;
+    }else {
+        return tempPointer;
+    }
+}
+
+template<typename DataType>
+DataType LinkList<DataType>::getNodeData(ListNode<DataType> *p) {
+    ListNode<DataType> *tempPointer =head;
+    while(tempPointer!=NULL&&tempPointer->data!=p->data) {
+        tempPointer=tempPointer->next;
+    }
+    if(tempPointer==NULL) {
+        std::cout<<"node not found"<<std::endl;
+    }else {
+        return tempPointer->data;
+    }
+}
 
 

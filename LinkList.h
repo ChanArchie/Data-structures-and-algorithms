@@ -9,7 +9,7 @@ public:
     LinkList();
     LinkList(ListNode<DataType> *node);
     ~LinkList();
-    bool insertNode(ListNode<DataType> *q,DataType newData);
+    bool insertNode(DataType newData);
     bool removeNode(ListNode<DataType> *q);
     ListNode<DataType>* findNode(DataType value);
     bool cleanLink();
