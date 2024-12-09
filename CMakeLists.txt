@@ -4,7 +4,7 @@ project(Data_structures_and_algorithms)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Data_structures_and_algorithms main.cpp
-        LinkList.cpp
+        LinkList.tpp
         LinkList.h
         ListNode.h
-        ListNode.cpp)
+        ListNode.tpp)
