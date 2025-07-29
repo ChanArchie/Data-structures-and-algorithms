@@ -2,7 +2,7 @@
 // Created by Administrator on 25-7-29.
 //
 
-#include "List.h"
+#include "sqList.h"
 #include <iostream>
 #include <cstdio>
 using namespace std;
@@ -57,3 +57,19 @@ ElemType LocateElem(SqList &L, ElemType i){
 ElemType GetElem(SqList &L, int i){
   return L.data[i];
 };
+
+int main() {
+  SqList L1;
+  SqList L2;
+  InitList(L1);
+  InitList(L2);
+  L1.length = 2;
+  L1.data[0] = 10;
+  L1.data[1] = 20;
+  L1.data[2] = 30;
+  L1.length = 3;
+  PrintList(L1);
+  ListDelete(L1,2);
+  PrintList(L1);
+  return 0;
+}
