@@ -1,4 +1,1 @@
-"D:\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S D:\Project\CLionProject\Data-structures-and-algorithms -B D:\Project\CLionProject\Data-structures-and-algorithms\cmake-build-debug
--- Configuring done (0.2s)
--- Generating done (0.0s)
--- Build files have been written to: D:/Project/CLionProject/Data-structures-and-algorithms/cmake-build-debug
+在 D:\Project\CLionProject\Data-structures-and-algorithms 中找不到 CMakeLists.txt 选择 CMakeLists.txt
