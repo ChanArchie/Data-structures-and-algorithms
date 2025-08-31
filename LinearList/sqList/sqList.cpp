@@ -61,6 +61,7 @@ ElemType GetElem(SqList &L, int i){
 int main() {
   SqList L1;
   SqList L2;
+  SqList L3;
   InitList(L1);
   InitList(L2);
   L1.length = 2;
