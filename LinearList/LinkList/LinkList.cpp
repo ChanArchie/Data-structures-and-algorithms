@@ -50,7 +50,7 @@ void list_tail_insert(LNode* &L)
     r->next=NULL;
 }
 
-void printList(LinkList L)
+void print_list(LinkList L)
 {
     while(L->next!=NULL)
     {
