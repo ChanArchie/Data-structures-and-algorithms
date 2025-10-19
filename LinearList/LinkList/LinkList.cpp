@@ -15,7 +15,7 @@ typedef struct LNode{
 }LNode,*LinkList;
 
 //LNode*是结构指针，和LinkList完全等价
-void headInsert(LinkList &L){
+void list_head_insert(LinkList &L){
     L=(LinkList)malloc(sizeof(LNode));
     //申请头节点空间，头指针指向头节点
     L->next=NULL;
@@ -30,6 +30,24 @@ void headInsert(LinkList &L){
         L->next=s;//头节点指向新的节点
         scanf("%d",&x);
     }
+}
+
+void list_tail_insert(LNode* &L)
+{
+    L=(LinkList)malloc(sizeof(LNode));
+    L->next=NULL;
+    ElemType x;
+    scanf("%d",&x);
+    LNode *s,*r=L;
+    while(x!=9999)
+    {
+        s=(LinkList)malloc(sizeof(LNode));
+        s->data =x;
+        r->next=s;//新结点给尾节点的next指针
+        r=s;
+        scanf("%d",&x);
+    }
+    r->next=NULL;
 }
 
 void printList(LinkList L)
